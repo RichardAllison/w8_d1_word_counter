@@ -26,7 +26,7 @@ public class WordCounter {
             count += 1;
             wordOccurrences.put(word, count);
         }
-        String wordsByOccurrence = "";
+        String wordsByOccurrence = new String();
         for (String key : wordOccurrences.keySet()) {
             Integer value = wordOccurrences.get(key);
             wordsByOccurrence += "\"" + key + "\"" + " : " + value + ", ";

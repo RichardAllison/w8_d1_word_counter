@@ -11,12 +11,12 @@ public class WordCounterTest {
 
     @Before
     public void before() {
-        wordCounter = new WordCounter();
+        wordCounter = new WordCounter("Java is awesome!");
     }
 
     @Test
     public void countsWords() {
-        assertEquals(3, wordCounter.wordCount("Java is awesome!"));
+        assertEquals("3", wordCounter.wordCount());
     }
 
 }

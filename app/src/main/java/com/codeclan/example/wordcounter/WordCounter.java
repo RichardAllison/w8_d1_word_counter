@@ -29,7 +29,7 @@ public class WordCounter {
         String wordsByOccurrence = "";
         for (String key : wordOccurrences.keySet()) {
             Integer value = wordOccurrences.get(key);
-            wordsByOccurrence = wordsByOccurrence + "\"" + key + "\"" + " : " + value + ", ";
+            wordsByOccurrence += "\"" + key + "\"" + " : " + value + ", ";
         }
 
         return wordsByOccurrence.substring(0, wordsByOccurrence.length() - 2);

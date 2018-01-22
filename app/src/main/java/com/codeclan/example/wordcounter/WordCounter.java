@@ -16,9 +16,23 @@ public class WordCounter {
         return String.valueOf(this.words.length);
     }
 
-//    public HashMap<String, Integer> wordOccurrences() {
-//        HashMap<String, Integer> wordOccurrences = new HashMap<>();
-//        return wordOccurrences;
-//    }
+    public String wordOccurrences() {
+        HashMap<String, Integer> wordOccurrences = new HashMap<>();
+        for(String word : this.words){
+            Integer count = wordOccurrences.get(word);
+            if (count == null){
+                count = 0;
+            }
+            count += 1;
+            wordOccurrences.put(word, count);
+        }
+        String wordsByOccurrence = "";
+        for (String key : wordOccurrences.keySet()) {
+            Integer value = wordOccurrences.get(key);
+            wordsByOccurrence = wordsByOccurrence + "\"" + key + "\"" + " : " + value + ", ";
+        }
+
+        return wordsByOccurrence.substring(0, wordsByOccurrence.length() - 2);
+    }
 
 }

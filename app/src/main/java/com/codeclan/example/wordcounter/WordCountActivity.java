@@ -29,4 +29,10 @@ public class WordCountActivity extends AppCompatActivity {
         wordCountDisplayText.setText(wordCounter.wordCount());
     }
 
+    public void onWordOccurrenceButtonClicked(View button) {
+        String wordCountText = wordCountEditText.getText().toString();
+        WordCounter wordCounter = new WordCounter(wordCountText);
+        wordCountDisplayText.setText(wordCounter.wordOccurrences());
+    }
+
 }

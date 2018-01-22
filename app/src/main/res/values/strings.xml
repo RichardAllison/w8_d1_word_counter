@@ -3,4 +3,5 @@
     <string name="type_text_here">Type text here</string>
     <string name="word_count_button">Word Count</string>
     <string name="word_count" />
+    <string name="word_occurrence">Word Occurrence</string>
 </resources>
